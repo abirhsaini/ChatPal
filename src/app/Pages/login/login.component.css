@@ -1,0 +1,14 @@
+/* login.component.css */
+
+@keyframes rotate {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+.rotate-animation {
+    animation: rotate 0.5s linear 1;
+}

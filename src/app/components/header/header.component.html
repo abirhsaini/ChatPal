@@ -1,0 +1,47 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Toggle button -->
+        <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <a class="navbar-brand mt-2 mt-lg-0" routerLink="/users">
+                <img src="../../../assets//images/ChatPal.png" alt="" width="50" height="50">
+            </a>
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/users" href="#">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/chats"> Chats</a>
+                </li>
+            </ul>
+            <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+            <div ngbDropdown class="d-inline-block" display="dynamic" placement="bottom-end">
+                <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">
+                    <img src="https://source.unsplash.com/100x100/?portrait" loading="lazy" class="rounded-circle" height="35">
+                </a>
+                <div ngbDropdownMenu aria-labelledby="navbarDropdown3" class="dropdown-menu">
+                    <a ngbDropdownItem (click)="$event.preventDefault()">profile</a>
+                    <a ngbDropdownItem (click)="$event.preventDefault()">settings</a>
+                    <hr>
+                    <a ngbDropdownItem (click)="$event.preventDefault()">logout</a>
+                </div>
+            </div>
+        </div>
+        <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

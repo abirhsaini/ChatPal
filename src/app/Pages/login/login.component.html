@@ -1,0 +1,48 @@
+<section class="" style="background-color: #244254;">
+    <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1rem;">
+                    <div class="row g-0">
+                        <div class="col-md-6 col-lg-5 d-none d-md-block ">
+                            <div class="d-flex align-items-center justify-content-center" style="height:100vh;">
+                                <img [src]="homeImage" class="rotate-animation" width="450">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                            <div class="card-body p-4 p-lg-5 text-black">
+
+                                <form (ngSubmit)="login()">
+
+                                    <div class="d-flex align-items-center justify-content-center mb-3 pb-1">
+                                        <img [src]="pathLogo" width="100">
+
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input type="email" id="form2Example17" required class="form-control form-control-lg" [(ngModel)]="user.user_email" name="email" />
+                                        <label class="form-label" for="form2Example17">Email address</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input type="password" id="form2Example27" [(ngModel)]="user.user_password" required class="form-control form-control-lg" name="password" />
+                                        <label class="form-label" for="form2Example27">Password</label>
+                                    </div>
+
+                                    <div class="pt-1 mb-4">
+                                        <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+                                    </div>
+
+                                    <a class="small text-muted" href="#!">Forgot password?</a>
+                                    <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="#!" routerLink="/signup" style="color: #393f81;">Register here</a></p>
+
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

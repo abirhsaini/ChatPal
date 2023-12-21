@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<!-- chat-client.component.html -->
+<!-- chat-client.component.html -->
+
+<div style="position: absolute; width: 100%; height: 100%; background-color: #f4ede3; display: flex; align-items: center;">
+    <div class="container rounded" style="width: 100%; height: 90%;">
+        <div class="row shadow rounded" style="width: 100%; background-color: #393f81; color: aliceblue; ">
+            <div class="col-md-2 p-4">
+                <ul>
+                    <li *ngFor="let item of members" (click)="onSendPrivateMessage(item)"> <a>{{ item.user_name }}</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10 bg-light rounded">
+                <div class="chat-content shadow">
+                    <div *ngFor="let item of chatRows" style="padding-bottom: 9px; color: rgb(0, 0, 0);">
+                        <p class="text align-items-center align-self-center p-2">{{ item }}</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-end justify-content-end" style="margin: 10px;">
+                    <button class="btn btn-outline-secondary" *ngIf="isConnected" (click)="onSendPublicMessage()" style="margin-right: 7px;" mat-button color="primary" size="small">Send Public Message</button>
+                    <button class="btn btn-outline-secondary" *ngIf="isConnected" (click)="onDisconnect()" mat-button color="warn" size="small">Disconnect</button>
+                    <button class="btn btn-outline-secondary" *ngIf="!isConnected" (click)="onConnect()" mat-button color="primary" size="small">Connect</button>
+
+                </div>
+                <div class="status-indicator" style="position: absolute; right: 9px; top: 8px; width: 12px; height: 12px; border-radius: 50%;" [style.background-color]="isConnected ? '#00da00' : '#e2e2e2'"></div>
+            </div>
+        </div>
+    </div>
+</div>

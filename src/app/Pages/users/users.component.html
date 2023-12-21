@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div class="container mt-2">
+    <div class="d-flex align-items-center justify-content-center text-center m-4">
+        <form class="form-inline" style="width:300px">
+            <div class="d-flex">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+    <div *ngFor="let user of users">
+        <div class="card mt-4">
+            <div class="card-header shadow">
+                <div class="d-flex m-2 p-1 w-100 justify-content-between">
+                    <div class="d-flex ">
+                        <img [src]='user.user_photoURL' class="rounded-circle mx-2" height="35">
+                        <h3>{{ user.username }}</h3>
+                    </div>
+
+                    <button href="#" class="btn btn-primary ml-auto">Send a Message</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ user.user_name }}</h5>
+
+            </div>
+        </div>
+    </div>
+</div>

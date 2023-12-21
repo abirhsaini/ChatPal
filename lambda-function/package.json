@@ -1,0 +1,8 @@
+{
+    "name": "lambda",
+    "description": "sk",
+    "author": "abir",
+    "dependencies": {
+        "aws-sdk": "2.1518.0"
+    }
+}
